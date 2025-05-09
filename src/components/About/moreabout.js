@@ -51,6 +51,9 @@ const MoreAbout = () => {
           </a>
         ))}
       </div>
+          <div>
+            <a herf="https://drive.google.com/drive/folders/1jLq8rOdQ67uZjP056xQ8N4uTsu_0ou1O?usp=sharing" target="_blank" >Click here to see more certificate</a>
+          </div>
     </div>
   );
 };
