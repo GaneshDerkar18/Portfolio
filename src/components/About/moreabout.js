@@ -14,12 +14,7 @@ const MoreAbout = () => {
       image: "/assects/iymc.png",
       link: "/assects/iymc.png"
     },
-    {
-      title: "Python for Data Science",
-      description: "Completed Python and Data Science fundamentals on Coursera.",
-      image: "https://images.credly.com/images/4f264f76-9905-4b89-bcd1-0f7fda2f2fcb/Coursera_Python.png",
-      link: "https://images.credly.com/images/4f264f76-9905-4b89-bcd1-0f7fda2f2fcb/Coursera_Python.png"
-    },
+    
   ];
 
   return (
