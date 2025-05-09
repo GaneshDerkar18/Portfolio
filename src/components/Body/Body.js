@@ -17,9 +17,10 @@ const Body = () => {
           feel free to reach out!
           </p>
         </p>
-        <div className="flex items-center justify-start mb-6">
+        <div className="flex items-center justify-start mb-6 mr-4">
           <a
             href="https://drive.google.com/file/d/1w-sSoS0w3oAzcuBZ5mHuCXCv7yWc0xdh/view?usp=sharing" // Replace with your actual email address
+  target="_blank" 
             className="px-6 py-3 bg-blue-600 dark:bg-blue-400 text-white dark:text-gray-900 font-semibold rounded-md shadow-lg hover:bg-blue-700 dark:hover:bg-blue-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 text-lg"
           >
             my_Resume
