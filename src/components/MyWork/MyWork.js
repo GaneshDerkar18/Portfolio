@@ -33,10 +33,10 @@ const allProjects = [
     demoLink: '#',
   },
   {
-    title: 'Project 5',
-    description: 'Description for Deep Learning Project 1',
-    image: 'https://via.placeholder.com/300',
-    githubLink: 'https://github.com/your-repo/project5',
+    title: 'Text_Extraction form images',
+    description: 'to extract text from images using ocr',
+    image: '#',
+    githubLink: 'https://github.com/Prashik9763/Text-Extraction-from-Image-using-OCR',
     demoLink: '#',
   },
 
