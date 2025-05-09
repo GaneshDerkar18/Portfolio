@@ -47,8 +47,14 @@ const MoreAbout = () => {
         ))}
       </div>
           <div>
-            <a herf="https://drive.google.com/drive/folders/1jLq8rOdQ67uZjP056xQ8N4uTsu_0ou1O?usp=sharing" target="_blank" >Click here to see more certificate</a>
-          </div>
+  <a href="https://drive.google.com/drive/folders/1jLq8rOdQ67uZjP056xQ8N4uTsu_0ou1O?usp=sharing" 
+     target="_blank" 
+     rel="noopener noreferrer"
+     className="text-blue-600 dark:text-blue-400 hover:underline">
+    Click here to see more certificates
+  </a>
+</div>
+
     </div>
   );
 };
