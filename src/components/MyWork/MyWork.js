@@ -23,7 +23,7 @@ const allProjects = [
     description: 'Frontend using react backend using firebase live link will be availabe soon as project is fully completed',
     image: '/assects/netflixgpt.png',
     githubLink: 'https://github.com/GaneshDerkar18/NetflixGpt',
-    demoLink: '#',
+    demoLink: 'https://netflixgpt-c0be4.web.app',
   },
   {
     title: 'devTender',
