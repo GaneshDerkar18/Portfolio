@@ -1,52 +1,42 @@
+import { useEffect } from 'react';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import './App.css';
+import portfolio from './data/portfolio.json';
 import Header from './components/Header/Header';
-import { lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import Router components
+import Body from './components/Body/Body';
+import About from './components/About/About';
+import MoreAbout from './components/About/moreabout';
+import Work from './components/MyWork/MyWork';
+import ProjectDetail, { NotFound } from './components/MyWork/ProjectDetail';
+import Contact from './components/Contact/Contact';
+import { Experience, FeaturedProjects, Skills } from './components/Sections';
+import { Footer } from './components/ui/Shared';
 
-// Lazy load components
-const Body = lazy(() => import('./components/Body/Body'));
-const About = lazy(() => import('./components/About/About'));
-const Contact = lazy(() => import('./components/Contact/Contact'));
-const Work = lazy(() => import('./components/MyWork/MyWork'));
-const MoreAbout = lazy(() => import('./components/About/moreabout')); // Import MoreAbout here
-
-function App() {
-  return (
-    <Router>
-      <div className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-        <Header />
-
-        <Suspense fallback={<h1 className="p-4">Loading Body...</h1>}>
-          <section id="home">
-            <Body />
-          </section>
-        </Suspense>
-
-        <Suspense fallback={<h1 className="p-4">Loading About...</h1>}>
-          <section id="about">
-            <About />
-          </section>
-        </Suspense>
-
-        <Suspense fallback={<h1 className="p-4">Loading Work...</h1>}>
-          <section id="work">
-            <Work />
-          </section>
-        </Suspense>
-
-         <Suspense fallback={<h1 className="p-4">Loading Contact...</h1>}>
-          <section id="contact">
-            <Contact />
-          </section>
-        </Suspense> 
-
-        {/* Define route for moreabout */}
-        <Routes>
-          <Route path="/moreabout" element={<MoreAbout />} /> {/* Correct route */}
-        </Routes>
-      </div>
-    </Router>
-  );
+function PageEffects() {
+  const { pathname, hash } = useLocation();
+  useEffect(() => {
+    const project = portfolio.projects.find(item => pathname === `/projects/${item.id}`);
+    const labels = { '/': portfolio.profile.role, '/about': 'About', '/projects': 'Projects', '/contact': 'Contact', '/moreabout': 'Certificates & achievements' };
+    const title = `${project?.title || labels[pathname] || 'Page not found'} | ${portfolio.profile.name}`;
+    const description = project?.description || portfolio.site.description;
+    document.title = title;
+    for (const [selector, value] of [
+      ['meta[name="description"]', description], ['meta[property="og:title"]', title],
+      ['meta[property="og:description"]', description], ['meta[name="twitter:title"]', title],
+      ['meta[name="twitter:description"]', description],
+    ]) document.querySelector(selector)?.setAttribute('content', value);
+    const frame = requestAnimationFrame(() => {
+      if (hash) { document.getElementById(hash.slice(1))?.scrollIntoView({ behavior: 'instant' }); }
+      else { window.scrollTo({ top: 0, behavior: 'instant' }); document.getElementById('main-content')?.focus({ preventScroll: true }); }
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [pathname, hash]);
+  return null;
 }
-
-export default App;
+function Home() {
+  return <><Body /><FeaturedProjects /><Skills /><Experience /><Contact /></>;
+}
+export default function App() {
+  const basename = process.env.PUBLIC_URL ? new URL(process.env.PUBLIC_URL, window.location.origin).pathname.replace(/\/$/, '') : undefined;
+  return <BrowserRouter basename={basename}><div id="top" className="app"><a href="#main-content" className="skip-link">Skip to content</a><PageEffects /><Header /><main id="main-content" tabIndex="-1"><Routes><Route path="/" element={<Home />} /><Route path="/about" element={<About />} /><Route path="/projects" element={<Work />} /><Route path="/projects/:projectId" element={<ProjectDetail />} /><Route path="/contact" element={<Contact standalone />} /><Route path="/moreabout" element={<MoreAbout />} /><Route path="*" element={<NotFound />} /></Routes></main><Footer /></div></BrowserRouter>;
+}

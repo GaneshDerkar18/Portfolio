@@ -1,69 +1,12 @@
-import React from 'react';
-import SkillsCube from './SkillsCube'; // Import the SkillsCube component
+import { Link } from 'react-router-dom';
+import portfolio from '../../data/portfolio.json';
+import Icon from '../ui/Icon';
+import { ExternalLink, SocialLinks } from '../ui/Shared';
 
-const Body = () => {
-  return (
-    <div className="flex flex-col md:flex-row items-center p-6 bg-gray-100 dark:bg-gray-800 min-h-screen">
-      <div className="flex-1 max-w-lg pl-4 md:pl-8 mb-8 md:mb-0">
-        <p className="text-lg leading-relaxed  text-gray-700 dark:text-gray-300 animate-fadeInSlideUp mb-6">
-          <span className='text-4xl'>
-          Hi, I'm Ganesh Derkar, 
-          </span>
-          <br></br>
-          <p className='text-2xl'>
-          a passionate developer with experience in
-          React.js and a love for creating dynamic and responsive web
-          applications. Explore my projects, learn more about my skills, and
-          feel free to reach out!
-          </p>
-        </p>
-        <div className="flex items-center justify-start mb-6 mr-4">
-          <a
-            href="https://drive.google.com/file/d/1w-sSoS0w3oAzcuBZ5mHuCXCv7yWc0xdh/view?usp=sharing" // Replace with your actual email address
-
-            className="px-6 mr-8 py-3 bg-blue-600 dark:bg-blue-400 text-white dark:text-gray-900 font-semibold rounded-md shadow-lg hover:bg-blue-700 dark:hover:bg-blue-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 text-lg"
-          >
-            myResume
-          </a>
-              <a
-            href="mailto:ganesh.derkar.dev@gmail.com" // Replace with your actual email address
-            className="px-6 py-3 bg-blue-600 dark:bg-blue-400 text-white dark:text-gray-900 font-semibold rounded-md shadow-lg hover:bg-blue-700 dark:hover:bg-blue-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 text-lg"
-          >
-            Hire Me
-          </a>
-        </div>
-        <div className="flex-col justify-center space-x-4">
-          <a 
-            href="https://github.com/GaneshDerkar18" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
-          >
-            <i className="fab fa-github fa-2x"></i>
-          </a>
-          <a 
-            href="https://x.com/_GaneshDerkar" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="text-gray-700 dark:text-gray-300 hover:text-blue-500 transition-colors"
-          >
-            <i className="fab fa-twitter fa-2x"></i>
-          </a>
-          <a 
-            href="https://www.linkedin.com/in/ganesh-derkar" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="text-gray-700 dark:text-gray-300 hover:text-blue-700 transition-colors"
-          >
-            <i className="fab fa-linkedin fa-2x"></i>
-          </a>
-        </div>
-      </div>
-      <div className="flex-1 flex justify-center items-center">
-        <SkillsCube /> {/* Replace the image with the SkillsCube component */}
-      </div>
-    </div>
-  );
+export default function Body() {
+  const { profile, featuredStack } = portfolio;
+  return <><section className="hero container" aria-labelledby="hero-title">
+    <div className="hero-content"><p className="eyebrow hero-eyebrow"><span className="short-line" />{profile.role}</p><h1 id="hero-title">{profile.headline[0]}<br /><span>{profile.headline[1]}</span></h1><p className="hero-intro">{profile.intro}</p><div className="hero-actions"><Link to="/projects" className="button button-primary">Explore my work <Icon name="right" size={18} /></Link><ExternalLink href={profile.resumeUrl} className="button button-outline"><Icon name="download" size={18} /> View résumé</ExternalLink></div><div className="hero-socials"><SocialLinks /><span className="social-divider" /><span className="location"><Icon name="pin" size={15} />{profile.location}</span></div></div>
+    <aside className="developer-card" aria-label="Developer profile"><div className="developer-card-top"><span className="mono">developer.profile</span><Icon name="code" size={19} /></div><div className="developer-card-main"><div className="profile-monogram" aria-hidden="true">{profile.initials}<span>.</span></div><p className="eyebrow">The person behind the code</p><h2>{profile.name}</h2><p className="developer-role">{profile.role}</p><div className="current-role"><span className="company-symbol" aria-hidden="true">/</span><div><span className="small-label">Currently at</span><strong>{profile.company}</strong></div><span className="role-badge">Software development</span></div><div className="profile-stack">{profile.focus.map(item => <div key={item.label}><span className="small-label">{item.label}</span><strong>{item.value}</strong></div>)}</div></div><div className="developer-card-bottom"><Icon name="code" size={16} /><span>From the first component to the final endpoint.</span></div></aside>
+  </section><div className="stack-strip"><div className="container stack-strip-inner"><span className="small-label">A few tools in my toolkit</span><ul>{featuredStack.map(skill => <li key={skill.name}><Icon name={skill.icon} size={23} /><span>{skill.name}</span></li>)}</ul></div></div></>;
 }
-
-export default Body;

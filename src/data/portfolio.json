@@ -1,0 +1,426 @@
+{
+  "profile": {
+    "name": "Ganesh Derkar",
+    "firstName": "Ganesh",
+    "initials": "GD",
+    "role": "Full Stack Software Developer",
+    "company": "Endava",
+    "location": "India",
+    "email": "ganesh.derkar.dev@gmail.com",
+    "headline": [
+      "Thoughtful code.",
+      "Useful software."
+    ],
+    "intro": "I’m Ganesh, a Full Stack Software Developer at Endava. I build intuitive interfaces, dependable APIs, and applications that connect the two.",
+    "bio": [
+      "I’m a Full Stack Software Developer at Endava with a background in Computer Engineering from MIT Academy of Engineering. I enjoy working across the stack, from the details of a responsive interface to the structure of a backend service.",
+      "My toolkit includes React, Angular, .NET Web API, and microservices. I work with Docker and GitHub Actions for delivery, and use OpenAI and Gemini API integrations in my projects to explore practical AI features.",
+      "I’m interested in software that is easy to use and easy to maintain. Spec-driven development with Spec Kit helps me connect requirements, implementation plans, and the code that follows."
+    ],
+    "resumeUrl": "https://drive.google.com/file/d/1w-sSoS0w3oAzcuBZ5mHuCXCv7yWc0xdh/view?usp=sharing",
+    "socials": [
+      {
+        "label": "GitHub",
+        "icon": "github",
+        "url": "https://github.com/GaneshDerkar18"
+      },
+      {
+        "label": "LinkedIn",
+        "icon": "linkedin",
+        "url": "https://www.linkedin.com/in/ganesh-derkar"
+      },
+      {
+        "label": "X / Twitter",
+        "icon": "x-twitter",
+        "url": "https://x.com/_GaneshDerkar"
+      }
+    ],
+    "focus": [
+      {
+        "label": "Interface",
+        "value": "React & Angular"
+      },
+      {
+        "label": "Services",
+        "value": ".NET & Node.js"
+      }
+    ]
+  },
+  "site": {
+    "description": "Ganesh Derkar, Full Stack Software Developer at Endava. Explore projects in React, Angular, .NET Web API, microservices, Docker, and AI integrations.",
+    "formspreeId": "mnndzgrv",
+    "contactHeading": "Good software starts with a conversation.",
+    "contactDescription": "Have a project in mind, a technical question, or an idea to explore? I’d love to hear about it.",
+    "footerNote": "Built with React. Made with intention."
+  },
+  "featuredStack": [
+    {
+      "name": "React",
+      "icon": "react"
+    },
+    {
+      "name": "Angular",
+      "icon": "angular"
+    },
+    {
+      "name": ".NET Web API",
+      "icon": "code"
+    },
+    {
+      "name": "Docker",
+      "icon": "docker"
+    },
+    {
+      "name": "GitHub Actions",
+      "icon": "github"
+    },
+    {
+      "name": "AI integrations",
+      "icon": "sparkles"
+    }
+  ],
+  "skillGroups": [
+    {
+      "id": "frontend",
+      "title": "Interfaces that feel right",
+      "label": "Frontend",
+      "icon": "window",
+      "description": "Responsive, accessible experiences with reusable components and a clear visual hierarchy.",
+      "skills": [
+        "React",
+        "Angular",
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "Bootstrap",
+        "Tailwind CSS"
+      ]
+    },
+    {
+      "id": "backend",
+      "title": "A dependable foundation",
+      "label": "Backend & data",
+      "icon": "server",
+      "description": "APIs and services that connect the interface to the data and logic behind it.",
+      "skills": [
+        "C#",
+        ".NET Web API",
+        "Microservices",
+        "REST APIs",
+        "Node.js",
+        "Express",
+        "SQL",
+        "MongoDB",
+        "Firebase"
+      ]
+    },
+    {
+      "id": "delivery",
+      "title": "From commit to delivery",
+      "label": "DevOps & workflow",
+      "icon": "layers",
+      "description": "Repeatable environments, automated workflows, and development grounded in clear specifications.",
+      "skills": [
+        "Docker",
+        "GitHub Actions CI/CD",
+        "Git",
+        "GitHub",
+        "Linux",
+        "Spec Kit",
+        "Spec-driven development"
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "AI with a practical purpose",
+      "label": "AI & integrations",
+      "icon": "sparkles",
+      "description": "Connecting applications with AI services to explore useful, user-focused features.",
+      "skills": [
+        "OpenAI API",
+        "Gemini API",
+        "API integration",
+        "Prompt engineering",
+        "Python",
+        "OCR"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "id": "endava",
+      "company": "Endava",
+      "role": "Full Stack Software Developer",
+      "period": "Present",
+      "current": true,
+      "description": "Working across frontend and backend development to turn requirements into practical software.",
+      "highlights": [
+        "Developing web experiences and backend services with a full-stack perspective.",
+        "Collaborating on implementation, code reviews, and maintainable solutions.",
+        "Continuing to grow across modern web development, API design, and delivery workflows."
+      ],
+      "skills": [
+        "Full-stack development",
+        "Web applications",
+        "API development",
+        "Collaboration"
+      ]
+    }
+  ],
+  "education": {
+    "institution": "MIT Academy of Engineering",
+    "subject": "Computer Engineering"
+  },
+  "principles": [
+    {
+      "number": "01",
+      "title": "Understand the problem",
+      "description": "Start with the people, the requirements, and what a useful outcome looks like."
+    },
+    {
+      "number": "02",
+      "title": "Build with clarity",
+      "description": "Keep interfaces intuitive, components reusable, and service boundaries clear."
+    },
+    {
+      "number": "03",
+      "title": "Keep improving",
+      "description": "Review, learn, and refine the small details that make software better over time."
+    }
+  ],
+  "projects": [
+    {
+      "id": "netflix-gpt",
+      "title": "NetflixGPT",
+      "subtitle": "A movie discovery experience",
+      "category": "Full stack",
+      "status": "Personal project",
+      "featured": true,
+      "accent": "red",
+      "icon": "film",
+      "image": "/assects/netflixgpt.png",
+      "description": "A movie-focused web application pairing a React interface with Firebase authentication and backend services.",
+      "overview": "A personal project exploring the experience of discovering movies through a familiar streaming-style interface. React powers the frontend while Firebase provides the backend foundation.",
+      "technologies": [
+        "React",
+        "Firebase",
+        "JavaScript",
+        "CSS"
+      ],
+      "highlights": [
+        "Streaming-inspired interface with a responsive layout.",
+        "Sign-in experience connected to Firebase.",
+        "Reusable React components for the browsing experience."
+      ],
+      "githubUrl": "https://github.com/GaneshDerkar18/NetflixGpt",
+      "demoUrl": "https://netflixgpt-c0be4.web.app"
+    },
+    {
+      "id": "food-delivery",
+      "title": "Food Delivery",
+      "subtitle": "Good food. A simpler experience.",
+      "category": "Frontend",
+      "status": "Personal project",
+      "featured": true,
+      "accent": "orange",
+      "icon": "utensils",
+      "image": "/assects/fooddeli.png",
+      "description": "A responsive food delivery interface with API-driven content, client-side routing, and reusable React hooks.",
+      "overview": "An exploration of a practical food ordering interface, with an emphasis on reusable components, navigation, and working with external API data.",
+      "technologies": [
+        "React",
+        "React Router",
+        "REST APIs",
+        "JavaScript",
+        "CSS"
+      ],
+      "highlights": [
+        "Client-side navigation with React Router.",
+        "API integration for dynamic content.",
+        "Custom hooks that share stateful logic across components."
+      ],
+      "githubUrl": "https://github.com/GaneshDerkar18/food-delivery-app",
+      "demoUrl": ""
+    },
+    {
+      "id": "dev-tender",
+      "title": "devTender",
+      "subtitle": "Behind the connection",
+      "category": "Backend",
+      "status": "Personal project",
+      "featured": true,
+      "accent": "blue",
+      "icon": "server",
+      "image": "",
+      "description": "A backend project built with Node.js, Express, and MongoDB, focused on the service layer of a web application.",
+      "overview": "A backend-focused project for exploring application services with the Node.js ecosystem and a document database.",
+      "technologies": [
+        "Node.js",
+        "Express",
+        "MongoDB"
+      ],
+      "highlights": [
+        "Backend development with Node.js and Express.",
+        "MongoDB for document-based persistence.",
+        "Separation of server-side logic from the frontend."
+      ],
+      "githubUrl": "https://github.com/GaneshDerkar18/devTender",
+      "demoUrl": ""
+    },
+    {
+      "id": "task-manager",
+      "title": "Task Manager",
+      "subtitle": "A little more organized",
+      "category": "Frontend",
+      "status": "Personal project",
+      "featured": false,
+      "accent": "green",
+      "icon": "check",
+      "image": "/assects/todolist.png",
+      "description": "A focused React task manager with task creation, editing, completion, deletion, and search.",
+      "overview": "A small productivity application built to make everyday tasks easy to manage while practicing React state management and functional components.",
+      "technologies": [
+        "React",
+        "JavaScript",
+        "CSS",
+        "React Hooks"
+      ],
+      "highlights": [
+        "Create, edit, and delete tasks.",
+        "Mark tasks complete and find them through search.",
+        "Responsive interface built with functional components and hooks."
+      ],
+      "githubUrl": "https://github.com/GaneshDerkar18/todo-list-react-frontend",
+      "demoUrl": "https://GaneshDerkar18.github.io/todo-list-react-frontend/"
+    },
+    {
+      "id": "image-text-extraction",
+      "title": "Image to Text",
+      "subtitle": "Making image content usable",
+      "category": "AI & tools",
+      "status": "Project",
+      "featured": false,
+      "accent": "purple",
+      "icon": "scan",
+      "image": "",
+      "description": "An OCR project that extracts text from images and turns visual information into readable content.",
+      "overview": "A project exploring optical character recognition to extract text from image-based sources. The linked repository contains the project implementation.",
+      "technologies": [
+        "OCR",
+        "Image processing"
+      ],
+      "highlights": [
+        "Text extraction from image input.",
+        "An exploration of optical character recognition workflows."
+      ],
+      "githubUrl": "https://github.com/Prashik9763/Text-Extraction-from-Image-using-OCR",
+      "demoUrl": ""
+    },
+    {
+      "id": "commerce-microservices",
+      "title": "Commerce Services",
+      "subtitle": "An API-first commerce concept",
+      "category": "Backend",
+      "status": "Concept",
+      "featured": false,
+      "accent": "blue",
+      "icon": "layers",
+      "image": "",
+      "description": "A project concept for independent catalog and order services with .NET Web API, Docker, and an automated delivery pipeline.",
+      "overview": "A proposed portfolio project for demonstrating microservice boundaries and repeatable delivery. This is a concept, not a completed implementation.",
+      "technologies": [
+        ".NET Web API",
+        "C#",
+        "Microservices",
+        "SQL",
+        "Docker",
+        "GitHub Actions CI/CD"
+      ],
+      "highlights": [
+        "Planned: independent catalog and order APIs.",
+        "Planned: containerized local development with Docker.",
+        "Planned: automated build and test workflows with GitHub Actions."
+      ],
+      "githubUrl": "",
+      "demoUrl": ""
+    },
+    {
+      "id": "ai-workspace",
+      "title": "AI Workspace",
+      "subtitle": "One interface. Two AI providers.",
+      "category": "AI & tools",
+      "status": "Concept",
+      "featured": false,
+      "accent": "purple",
+      "icon": "sparkles",
+      "image": "",
+      "description": "A project concept for an Angular workspace backed by a .NET API integrating OpenAI and Gemini.",
+      "overview": "A proposed application for exploring AI-assisted workflows through a common interface. Provider credentials would live on the server. This is a concept, not a completed implementation.",
+      "technologies": [
+        "Angular",
+        "Bootstrap",
+        ".NET Web API",
+        "OpenAI API",
+        "Gemini API"
+      ],
+      "highlights": [
+        "Planned: an Angular interface styled with Bootstrap.",
+        "Planned: provider integrations through a server-side API.",
+        "Planned: useful loading, error, and response states."
+      ],
+      "githubUrl": "",
+      "demoUrl": ""
+    },
+    {
+      "id": "spec-driven-starter",
+      "title": "Spec-driven Starter",
+      "subtitle": "From a clear spec to working code",
+      "category": "Developer tools",
+      "status": "Concept",
+      "featured": false,
+      "accent": "green",
+      "icon": "code",
+      "image": "",
+      "description": "A starter project concept connecting Spec Kit specifications, implementation tasks, and GitHub Actions checks.",
+      "overview": "A proposed development starter that keeps the problem statement and implementation plan close to the code. This is a concept, not a completed implementation.",
+      "technologies": [
+        "Spec Kit",
+        "GitHub Actions CI/CD",
+        "Docker",
+        "React",
+        ".NET Web API"
+      ],
+      "highlights": [
+        "Planned: a specification-to-implementation workflow.",
+        "Planned: documented development and review tasks.",
+        "Planned: containerized setup and automated checks."
+      ],
+      "githubUrl": "",
+      "demoUrl": ""
+    }
+  ],
+  "achievements": [
+    {
+      "id": "hackathon",
+      "title": "Inspiron 2.0 Hackathon",
+      "description": "Participated in the national-level hackathon at COEP Technological University in March 2023.",
+      "image": "/assects/hackathon.png",
+      "url": "/assects/hackathon.png"
+    },
+    {
+      "id": "iymc",
+      "title": "IYMC 2022 · Bronze Honour",
+      "description": "Placed among the top 15% of participants in the International Youth Math Challenge final round.",
+      "image": "/assects/iymc.png",
+      "url": "/assects/iymc.png"
+    },
+    {
+      "id": "equilibrium",
+      "title": "Equilibrium 2022 · 2nd runner-up",
+      "description": "Recognized at the national-level eXEMPLAR event at MIT Academy of Engineering.",
+      "image": "/assects/WhatsApp Image 2025-04-23 at 12.49.11.jpeg",
+      "url": "/assects/WhatsApp Image 2025-04-23 at 12.49.11.jpeg"
+    }
+  ],
+  "certificatesUrl": "https://drive.google.com/drive/folders/1jLq8rOdQ67uZjP056xQ8N4uTsu_0ou1O?usp=sharing"
+}

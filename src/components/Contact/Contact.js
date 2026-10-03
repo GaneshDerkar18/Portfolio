@@ -1,78 +1,27 @@
-import React from 'react';
+import { useRef, useState } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
+import portfolio from '../../data/portfolio.json';
+import Icon from '../ui/Icon';
+import { SocialLinks } from '../ui/Shared';
 
-const Contact = () => {
-  const [state, handleSubmit] = useForm("mnndzgrv");
-
-  if (state.succeeded) {
-    return (
-      <div className="flex justify-center items-center min-h-screen bg-white dark:bg-gray-800">
-        <p className="text-2xl text-center text-green-600 dark:text-green-400 font-semibold">Thanks for your message!</p>
-      </div>
-    );
-  }
-
-  return (
-    <div className="flex flex-col min-h-screen p-8 bg-white dark:bg-gray-800">
-      <h1 className="text-3xl font-bold text-center mb-8 text-gray-900 dark:text-gray-100">Contact Me</h1>
-      <div className="flex-grow flex items-center justify-center">
-        <form onSubmit={handleSubmit} className="w-full max-w-3xl">
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            <div className="mb-6">
-              <label htmlFor="name" className="block text-lg font-medium text-gray-700 dark:text-gray-300">Name*</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                className="mt-2 block w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-lg"
-              />
-            </div>
-            <div className="mb-6">
-              <label htmlFor="email" className="block text-lg font-medium text-gray-700 dark:text-gray-300">Email*</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                className="mt-2 block w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-lg"
-              />
-              <ValidationError prefix="Email" field="email" errors={state.errors} />
-            </div>
-          </div>
-          <div className="mb-6">
-            <label htmlFor="subject" className="block text-lg font-medium text-gray-700 dark:text-gray-300">Subject*</label>
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              required
-              className="mt-2 block w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-lg"
-            />
-          </div>
-          <div className="mb-6">
-            <label htmlFor="message" className="block text-lg font-medium text-gray-700 dark:text-gray-300">Message*</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="6"
-              required
-              className="mt-2 block w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-lg"
-            ></textarea>
-            <ValidationError prefix="Message" field="message" errors={state.errors} />
-          </div>
-          <button
-            type="submit"
-            disabled={state.submitting}
-            className="w-full px-6 py-3 bg-indigo-600 dark:bg-indigo-400 text-white dark:text-gray-900 font-semibold rounded-md shadow-lg hover:bg-indigo-700 dark:hover:bg-indigo-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 text-lg"
-          >
-            {state.submitting ? 'Sending...' : 'Send Message'}
-          </button>
-        </form>
-      </div>
-    </div>
-  );
-};
-
-export default Contact;
-
+function ContactForm() {
+  const [state, handleSubmit, reset] = useForm(portfolio.site.formspreeId);
+  const [networkError, setNetworkError] = useState(false);
+  const [pending, setPending] = useState(false);
+  const locked = useRef(false);
+  const submit = async event => {
+    event.preventDefault();
+    if (locked.current) return;
+    locked.current = true;
+    setPending(true);
+    setNetworkError(false);
+    try { await handleSubmit(event); } catch { setNetworkError(true); }
+    finally { setPending(false); locked.current = false; }
+  };
+  if (state.succeeded) return <div className="form-success" role="status"><span className="success-icon"><Icon name="check" size={28} /></span><h3>Message sent. Thank you!</h3><p>I appreciate you reaching out. I’ll get back to you by email.</p><button type="button" className="button button-outline" onClick={reset}>Send another message</button></div>;
+  return <form onSubmit={submit} className="contact-form"><div className="form-heading"><h3>Send me a message</h3><span className="small-label">All fields required</span></div><div className="form-row"><div className="form-field"><label htmlFor="contact-name">Your name</label><input id="contact-name" name="name" autoComplete="name" placeholder="Alex Morgan" maxLength="100" required /><ValidationError prefix="Name" field="name" errors={state.errors} /></div><div className="form-field"><label htmlFor="contact-email">Email address</label><input id="contact-email" name="email" type="email" autoComplete="email" placeholder="alex@example.com" maxLength="254" required /><ValidationError prefix="Email" field="email" errors={state.errors} /></div></div><div className="form-field"><label htmlFor="contact-subject">What’s on your mind?</label><input id="contact-subject" name="subject" placeholder="A project, an opportunity, an idea…" maxLength="200" required /></div><div className="form-field"><label htmlFor="contact-message">Your message</label><textarea id="contact-message" name="message" rows="4" placeholder="Tell me a little about it…" maxLength="5000" required /><ValidationError prefix="Message" field="message" errors={state.errors} /></div><div className="form-error" role="alert"><ValidationError errors={state.errors} />{networkError && <p>Your message couldn’t be sent. Please try again or use the email link.</p>}</div><button type="submit" disabled={pending || state.submitting} className="button button-primary">{pending || state.submitting ? 'Sending…' : 'Send message'}<Icon name="arrow" size={18} /></button><p className="form-note">Sent securely through Formspree.</p></form>;
+}
+export default function Contact({ standalone = false }) {
+  const Heading = standalone ? 'h1' : 'h2';
+  return <section id="contact" className={`contact-section ${standalone ? 'standalone-contact' : ''}`}><div className="container contact-grid"><div className="contact-copy"><p className="eyebrow">{standalone ? 'Get in touch' : '04 / Let’s connect'}</p><Heading>{portfolio.site.contactHeading}</Heading><p>{portfolio.site.contactDescription}</p><a className="email-link" href={`mailto:${portfolio.profile.email}`}>{portfolio.profile.email}<Icon name="arrow" size={22} /></a><SocialLinks showLabels /><p className="contact-location"><Icon name="pin" size={16} /> Based in {portfolio.profile.location}. Connected everywhere.</p></div>{portfolio.site.formspreeId ? <ContactForm /> : <div className="email-fallback"><Icon name="mail" size={40} /><h3>Let’s start with an email.</h3><p>Tell me about your project or idea.</p><a className="button button-primary" href={`mailto:${portfolio.profile.email}`}>Write an email <Icon name="arrow" size={18} /></a></div>}</div></section>;
+}

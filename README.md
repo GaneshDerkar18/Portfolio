@@ -1,77 +1,97 @@
-# Portfolio - Ganesh Derkar
+# Ganesh Derkar — React portfolio
 
-Welcome to my personal portfolio! This website serves as a showcase for my work, skills, and projects as a web developer. It includes a contact form where users can send inquiries directly to me. Below is all the information you need to understand, install, and contribute to this project.
+A responsive full-stack developer portfolio with dark and light themes, project search and filters, individual project pages, experience, skills, certificates, and a Formspree contact form.
 
-## Features
+## Update everything in one file
 
-- **Contact Form:** Users can send a message to me directly (the EmailJS integration for the contact form is planned and will be integrated soon).
-- **Responsive Design:** The website is designed to be fully responsive and looks great on both desktop and mobile devices.
-- **Personalized Content:** The portfolio includes sections about me, my skills, projects, and an easy way for potential clients, employers, or collaborators to get in touch.
+Edit **`src/data/portfolio.json`**. This is the content source for all pages.
 
-## Technologies Used
+| Section | What to update |
+| --- | --- |
+| `profile` | Name, role, employer, introduction, biography, location, résumé, social links, and focus areas |
+| `projects` | Project cards, detail pages, featured work, technology tags, and links |
+| `skillGroups` / `featuredStack` | Skills section and homepage technology strip |
+| `experience` / `education` | Work history and education |
+| `principles` / `achievements` | About-page content and certificates |
+| `site` | Site description, contact copy, Formspree form ID, footer text |
+| `certificatesUrl` | Link to the full certificate collection |
 
-### Frontend:
-- **React.js:** A JavaScript library for building user interfaces. It powers the dynamic elements of the portfolio.
-- **Tailwind CSS:** A utility-first CSS framework used for styling and ensuring a responsive, mobile-first layout.
-- **JavaScript (ES6+):** JavaScript is used for dynamic behavior and functionality.
+The current experience entry uses `profile.company` and `profile.role`, so the company and role agree across the homepage, About, and experience section. Freeform introductions and biographies are editable prose in the same file.
 
-### Backend (Planned):
-- **EmailJS (coming soon):** I plan to integrate EmailJS for the contact form, allowing users to send messages to my email (`ganesh.derkar.dev@gmail.com`).
+### Add a project
 
----
+Copy an entry in the `projects` array, give it a **unique, lowercase, hyphenated id**, and edit its content:
 
-## Installation
+```json
+{
+  "id": "my-new-project",
+  "title": "My New Project",
+  "subtitle": "A short project tagline",
+  "category": "Full stack",
+  "status": "Personal project",
+  "featured": true,
+  "accent": "blue",
+  "icon": "code",
+  "image": "/assects/my-new-project.png",
+  "description": "A concise summary for the project card.",
+  "overview": "What the project does and why you built it.",
+  "technologies": ["Angular", ".NET Web API", "Docker"],
+  "highlights": ["A real feature you implemented."],
+  "githubUrl": "",
+  "demoUrl": ""
+}
+```
 
-To get the project running locally on your machine, follow these steps:
+- Save images in `public/assects/`, then reference them as `/assects/filename.png`. An empty `image` uses a styled title card.
+- `featured: true` includes the project on the homepage.
+- Project categories, filters, counts, related work, and `/projects/my-new-project` are generated automatically. No route or component edits needed.
+- Leave `githubUrl` and `demoUrl` empty when unavailable. The corresponding buttons stay hidden.
+- Accent options: `blue`, `purple`, `green`, `red`, `orange`.
+- Useful icons: `code`, `server`, `layers`, `sparkles`, `film`, `utensils`, `check`, `scan`.
+- The three additional project ideas are explicitly marked **Concept**. Replace their proposed scope with your actual implementation details and links when ready.
+- Update the Endava `period` from `Present` to your real start date when available. No employment dates or project metrics have been invented.
 
-### Step 1: Clone the repository
-git clone https://github.com/GaneshDerkar18/Portfolio.git
-### Step 2: Navigate to the project directory
+## Run locally
 
-cd Portfolio
+Use a supported Node.js LTS version and npm.
 
-### Step 3: Install dependencies
-
+```sh
 npm install
-
-### Step 4: Start the development server
-
 npm start
+```
 
-Once the server starts, open your browser and visit http://localhost:3000 to view the portfolio.
-EmailJS Integration (Coming Soon)
+On Windows PowerShell, use `npm.cmd` if execution policy blocks `npm.ps1`.
 
-Currently, the EmailJS integration for the contact form is not yet implemented. Once this feature is added, users will be able to send messages directly to my email address: ganesh.derkar.dev@gmail.com.
+## Build and check
 
-Here’s what will happen once integrated
+```sh
+npm run build
+npm test -- --watchAll=false --runInBand
+```
 
-   # When users fill out the contact form, their message, along with their name and email, will be sent to me through EmailJS.
+Before starting or building, `scripts/sync-content.cjs` validates project IDs, required fields, image paths, and project links. It also generates `public/index.html`, `public/manifest.json`, and the monogram favicon from the shared content. **Edit the content file, not these generated files.**
 
-   # This will allow for seamless communication directly from the website.
+During development, React updates when you save the content file. Restart the server to refresh generated HTML metadata; a production build always refreshes it. Detail-page titles and descriptions update on navigation.
 
-Future Features
+## Routes and hosting
 
-I have several ideas for enhancing the portfolio in the future. These include
+- `/`: introduction, featured projects, skills, experience, contact
+- `/about`: biography, approach, experience, certificates
+- `/projects`: complete project collection with shareable search/filter URLs
+- `/projects/:id`: generated project detail page
+- `/contact`: contact page
+- `/moreabout`: preserved certificate-page URL
 
-  #  Blog Section: I plan to add a blog where I can share tutorials, technical insights, and personal experiences as a developer.
+Deploy the generated `build/` directory to a static host **with an SPA fallback to `index.html`** so direct visits and refreshes of nested routes work. For a subdirectory deployment, set Create React App’s `PUBLIC_URL` to that base path before building. Navigation and public assets honor this prefix.
 
-   # Animations & Transitions: Adding animations to enhance the user experience, such as hover effects, scroll animations, and smooth transitions between sections.
+The old checked-in `build/` output is not the source of truth. Run a fresh production build before deployment. Local verification can use `BUILD_PATH=.verification-build` to avoid changing that old output.
 
-   # Accessibility Enhancements: Improving the accessibility of the website for better navigation, especially for users with disabilities.
+## Contact and API integrations
 
-## License
+The existing Formspree ID is preserved in `site.formspreeId`. Change it to your own connected form ID when needed. An empty ID displays a direct email contact option. The form supports validation, sending, success, retry, and network-error states.
 
-This project is licensed under the MIT License. See the LICENSE file for more details.
-Contact
+OpenAI and Gemini are presented as portfolio skills and project technologies. This static portfolio does not call either AI provider. **Never put an API key in the content file, React source, or a `REACT_APP_*` variable**: client-side values are public. Any actual AI feature should call your backend, where provider credentials remain server-side.
 
-   # Email: ganesh.derkar.dev@gmail.com
+## Verification
 
-  # GitHub: GaneshDerkar18
-
-
-### How to use:
-1. **Copy the content** and paste it into a new **README.md** file in your project root directory.
-2. **Customize** any sections that you want to adjust (like the License or Contact info).
-3. **Push it** to your GitHub repository to update the repository documentation.
-
-Let me know if you need anything else or further customization!
+The interaction tests cover shared content, adding a project once, category and technology filtering, empty results, project navigation, concept labeling, missing links, About routing, 404 recovery, theme persistence, mobile menu behavior, and contact success/failure states. Formspree is mocked in tests so no real messages are sent.

@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import 'animate.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import '@fortawesome/fontawesome-free/css/fontawesome.min.css';
+import '@fortawesome/fontawesome-free/css/brands.min.css';
 
 
 
