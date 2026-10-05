@@ -1,0 +1,9 @@
+.header { height: 80px; padding-top: 11px; }
+.header .header-inner { height: 56px; border-radius: 15px; transition: background .25s, border-color .25s, box-shadow .25s; }
+.header.is-scrolled .header-inner { background: color-mix(in srgb, var(--surface) 43%, transparent); border-color: color-mix(in srgb, var(--border) 55%, transparent); backdrop-filter: blur(15px) saturate(120%); box-shadow: 0 4px 20px #030a1506; }
+.header.is-scrolled .header-inner:hover, .header.is-scrolled .header-inner:focus-within, .header.is-scrolled[data-menu-open='true'] .header-inner { background: var(--header-bg); border-color: var(--border); backdrop-filter: blur(22px); box-shadow: 0 8px 30px #030a151c; }
+@media (max-width: 800px) {
+  .header { height: 74px; padding-top: 9px; }
+  .header .header-inner { height: 54px; border-radius: 13px; }
+}
+@media (prefers-reduced-motion: reduce) { .header .header-inner { transition: none; } }

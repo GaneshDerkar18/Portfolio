@@ -1,0 +1,24 @@
+.technology-marquee .stack-strip-inner { display: flex; flex-direction: row; align-items: center; gap: 21px; padding-block: 17px; }
+.technology-marquee .stack-strip-inner > .small-label { width: 102px; font-size: .625rem; flex-shrink: 0; }
+.marquee-viewport { flex: 1; min-width: 0; overflow: hidden; mask-image: linear-gradient(90deg, transparent, black 25px, black calc(100% - 25px), transparent); }
+.marquee-track { display: flex; width: 100%; }
+.technology-marquee ul.marquee-group { flex: 0 0 auto; min-width: 100%; width: max-content; display: flex; justify-content: space-around; flex-wrap: nowrap; gap: 12px; padding-right: 12px; animation: toolkit-travel 32s linear infinite; }
+.technology-marquee .marquee-group li { flex: 0 0 auto; gap: 8px; padding: 9px 13px; border-radius: 8px; font-size: .6875rem; min-height: 40px; }
+.technology-marquee .marquee-group svg { width: 20px; height: 20px; }
+.technology-marquee .marquee-toggle { flex-shrink: 0; min-width: 32px; width: 32px; height: 32px; min-height: 32px; padding: 0; color: var(--subtle); background: transparent; border: 1px solid var(--border); border-radius: 50%; }
+.technology-marquee .marquee-toggle:hover { color: var(--text); background: var(--surface); transform: none; }
+.technology-marquee[data-paused='true'] .marquee-group, .technology-marquee[data-running='false'] .marquee-group, .technology-marquee:hover .marquee-group, .technology-marquee:focus-within .marquee-group { animation-play-state: paused; }
+@keyframes toolkit-travel { to { transform: translateX(-100%); } }
+@media (max-width: 600px) {
+  .technology-marquee .stack-strip-inner { gap: 11px; flex-wrap: wrap; }
+  .technology-marquee .stack-strip-inner > .small-label { width: auto; flex: 1; }
+  .technology-marquee .small-label br { display: none; }
+  .technology-marquee .marquee-viewport { order: 3; flex-basis: 100%; }
+  .technology-marquee .marquee-group li { font-size: .625rem; padding: 8px 11px; }
+  .technology-marquee .marquee-toggle { width: 28px; min-width: 28px; height: 28px; min-height: 28px; }
+}
+@media (prefers-reduced-motion: reduce), print {
+  .marquee-viewport { mask-image: none; overflow: visible; }
+  .technology-marquee ul.marquee-group { animation: none; transform: none; min-width: 0; width: 100%; padding: 0; gap: 8px; flex-wrap: wrap; justify-content: flex-start; }
+  .technology-marquee .marquee-group[aria-hidden='true'], .technology-marquee .marquee-toggle { display: none; }
+}

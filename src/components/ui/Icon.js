@@ -1,4 +1,26 @@
+<<<<<<< HEAD
 const paths = {
+=======
+import { ReactComponent as GitHub } from '@fortawesome/fontawesome-free/svgs/brands/github.svg';
+import { ReactComponent as LinkedIn } from '@fortawesome/fontawesome-free/svgs/brands/linkedin-in.svg';
+import { ReactComponent as Twitter } from '@fortawesome/fontawesome-free/svgs/brands/x-twitter.svg';
+import { ReactComponent as ReactLogo } from '@fortawesome/fontawesome-free/svgs/brands/react.svg';
+import { ReactComponent as Angular } from '@fortawesome/fontawesome-free/svgs/brands/angular.svg';
+import { ReactComponent as Docker } from '@fortawesome/fontawesome-free/svgs/brands/docker.svg';
+import { ReactComponent as JavaScript } from '@fortawesome/fontawesome-free/svgs/brands/js.svg';
+import { ReactComponent as Bootstrap } from '@fortawesome/fontawesome-free/svgs/brands/bootstrap.svg';
+import { ReactComponent as Node } from '@fortawesome/fontawesome-free/svgs/brands/node-js.svg';
+import { ReactComponent as Python } from '@fortawesome/fontawesome-free/svgs/brands/python.svg';
+
+const brands = { github: GitHub, linkedin: LinkedIn, 'x-twitter': Twitter, react: ReactLogo, angular: Angular, docker: Docker, javascript: JavaScript, bootstrap: Bootstrap, node: Node, python: Python };
+const paths = {
+  globe: 'M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM3 12h18M12 3c5 5 5 13 0 18-5-5-5-13 0-18Z',
+  leetcode: 'm14 2-9 9a4 4 0 0 0 0 6l3 3a4 4 0 0 0 6 0l2-2M8 8a4 4 0 0 1 6 0l2 2M10 14h11',
+  database: 'M20 5c0 4-16 4-16 0s16-4 16 0ZM4 5v14c0 4 16 4 16 0V5M4 12c0 4 16 4 16 0',
+  down: 'M12 4v16m-6-6 6 6 6-6',
+  left: 'M20 12H4m6-6-6 6 6 6',
+  print: 'M7 8V3h10v5M7 17H3V8h18v9h-4M7 14h10v7H7zM17 11h.01',
+>>>>>>> 08d3bc0 (updated ui)
   arrow: 'M7 17 17 7M7 7h10v10',
   right: 'M4 12h16m-6-6 6 6-6 6',
   menu: 'M4 6h16M4 12h16M4 18h16',
@@ -21,8 +43,14 @@ const paths = {
   download: 'M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5',
 };
 export default function Icon({ name, size = 20, className = '' }) {
+<<<<<<< HEAD
   if (['github', 'linkedin', 'x-twitter', 'react', 'angular', 'docker'].includes(name)) {
     return <i className={`fa-brands fa-${name} ${className}`} style={{ fontSize: size }} aria-hidden="true" />;
   }
   return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true"><path d={paths[name] || paths.code} /></svg>;
+=======
+  const Brand = brands[name];
+  if (Brand) return <Brand width={size} height={size} fill="currentColor" className={className} aria-hidden="true" focusable="false" />;
+  return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true"><path d={paths[name] || paths.globe} /></svg>;
+>>>>>>> 08d3bc0 (updated ui)
 }

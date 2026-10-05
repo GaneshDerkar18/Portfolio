@@ -1,0 +1,10 @@
+.cursor-trail { position: fixed; inset: 0 auto auto 0; z-index: 100; pointer-events: none; opacity: 0; transition: opacity .18s; }
+.cursor-trail[data-visible='true'] { opacity: 1; }
+.cursor-anchor { position: absolute; top: 0; left: 0; width: 0; height: 0; pointer-events: none; will-change: transform; }
+.cursor-ring { display: block; width: 27px; height: 27px; border: 1px solid color-mix(in srgb, var(--accent) 65%, transparent); border-radius: 50%; background: color-mix(in srgb, var(--accent) 5%, transparent); box-shadow: 0 0 18px color-mix(in srgb, var(--accent) 7%, transparent); transform: translate(-50%, -50%); transition: width .2s, height .2s, border-color .2s, background .2s; }
+.cursor-trail[data-interactive='true'] .cursor-ring { width: 42px; height: 42px; border-color: var(--aqua); background: color-mix(in srgb, var(--aqua) 8%, transparent); }
+.cursor-trail[data-pressed='true'] .cursor-ring { width: 20px; height: 20px; background: color-mix(in srgb, var(--aqua) 16%, transparent); }
+.cursor-mote { display: block; width: 4px; height: 4px; border-radius: 50%; background: var(--violet); opacity: .65; transform: translate(-50%, -50%); transition: opacity .22s; }
+.cursor-mote-last { width: 3px; height: 3px; background: var(--aqua); opacity: .5; }
+.cursor-trail[data-idle='true'] .cursor-mote { opacity: 0; }
+@media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce), print { .cursor-trail { display: none; } }

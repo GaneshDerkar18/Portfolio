@@ -11,6 +11,11 @@
   ],
   "start_url": ".",
   "display": "standalone",
+<<<<<<< HEAD
   "theme_color": "#0b0e14",
   "background_color": "#0b0e14"
+=======
+  "theme_color": "#0b1120",
+  "background_color": "#0b1120"
+>>>>>>> 08d3bc0 (updated ui)
 }

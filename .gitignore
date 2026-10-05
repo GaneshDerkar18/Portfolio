@@ -1,5 +1,10 @@
 node_modules
 .verification-build/
+<<<<<<< HEAD
+=======
+.verification-tools/
+tmp/pdfs/
+>>>>>>> 08d3bc0 (updated ui)
 .env
 .env.local
 .env.*.local

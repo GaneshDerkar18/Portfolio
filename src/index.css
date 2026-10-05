@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+<<<<<<< HEAD
   color-scheme: dark;
   --bg: #0b0e14;
   --surface: #11151e;
@@ -57,3 +58,145 @@ svg { flex-shrink: 0; }
 main:focus { outline: none; }
 input, textarea { min-width: 0; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; animation-iteration-count: 1 !important; } }
+=======
+  color-scheme: light;
+  --bg: #f7f9fd;
+  --surface: #ffffff;
+  --surface-raised: #edf2fa;
+  --surface-soft: #f0f4fa;
+  --text: #15243b;
+  --muted: #506079;
+  --subtle: #61718a;
+  --border: #dce4f0;
+  --accent: #2c5db1;
+  --accent-strong: #214887;
+  --accent-soft: rgba(59, 112, 205, 0.07);
+  --button-bg: #2c5db1;
+  --button-text: #ffffff;
+  --header-bg: rgba(247, 249, 253, 0.94);
+  --shadow: 0 24px 80px rgba(26, 27, 35, 0.08);
+  --aqua: #087c85;
+  --violet: #7453bd;
+  --display-font: "Space Grotesk", "Inter", sans-serif;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0a0f1c;
+  --surface: #111a2b;
+  --surface-raised: #1a2940;
+  --surface-soft: #0d1524;
+  --text: #eaf0fa;
+  --muted: #a6b5cb;
+  --subtle: #90a1bc;
+  --border: #25344b;
+  --accent: #9bbbff;
+  --accent-strong: #b7d1ff;
+  --accent-soft: rgba(123, 170, 255, 0.08);
+  --button-bg: #91b8ff;
+  --button-text: #0c1b35;
+  --header-bg: rgba(13, 21, 36, 0.88);
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.16);
+  --aqua: #7be1d3;
+  --violet: #b2a1fa;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.18;
+  font-weight: 600;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button,
+input,
+textarea {
+  font: inherit;
+}
+button,
+a,
+input,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+img,
+svg {
+  display: block;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+svg {
+  flex-shrink: 0;
+}
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+}
+main:focus {
+  outline: none;
+}
+input,
+textarea {
+  min-width: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+>>>>>>> 08d3bc0 (updated ui)

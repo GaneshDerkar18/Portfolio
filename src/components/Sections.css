@@ -1,0 +1,101 @@
+.section { padding-block: 68px; }
+.section-heading { margin-bottom: 28px; }
+.section-heading h2, .experience-intro h2 { font-size: clamp(1.9rem, 3vw, 2.6rem); }
+.section-description { font-size: .875rem; }
+.selected-work { padding-block: 46px 64px; }
+.stack-strip-inner { padding-block: 17px; }
+
+/* A readable directory: one category per row, all skills visible. */
+.skill-rows { border-top: 1px solid var(--border); }
+.skill-row { --row-accent: var(--accent); display: grid; grid-template-columns: 225px minmax(0, 1fr); align-items: start; gap: 28px; padding-block: 23px; border-bottom: 1px solid var(--border); }
+.skill-row:nth-child(2) { --row-accent: var(--violet); }
+.skill-row:nth-child(3) { --row-accent: var(--aqua); }
+.skill-row-heading { display: flex; align-items: flex-start; gap: 12px; padding-top: 4px; }
+.skill-row-icon { display: grid; place-items: center; width: 34px; height: 34px; flex-shrink: 0; border: 1px solid var(--border); background: var(--surface); color: var(--row-accent); border-radius: 9px; }
+.skill-row-heading .small-label { font-size: .5625rem; color: var(--row-accent); }
+.skill-row h3 { font-size: .9375rem; font-weight: 500; letter-spacing: -.025em; line-height: 1.5; margin-top: 5px; }
+.skill-row-content { min-width: 0; }
+.skill-row-primary { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 13px; }
+.skill-row-primary > li { display: flex; align-items: center; gap: 10px; padding-block: 5px; min-width: 0; }
+.skill-row-primary > li > svg, .skill-row-primary > li > .skill-mark { color: var(--row-accent); flex-shrink: 0; }
+.skill-row-primary > li > .skill-mark { min-width: 22px; font-size: .875rem; }
+.skill-row-primary strong { display: block; font-size: .75rem; font-weight: 550; line-height: 1.5; }
+.skill-row-primary li > div > span { display: block; font-size: .625rem; color: var(--subtle); line-height: 1.55; margin-top: 3px; }
+.skill-row-supporting { display: flex; align-items: baseline; gap: 13px; margin-top: 13px; }
+.skill-row-supporting > .small-label { font-family: inherit; font-size: .625rem; }
+.skill-row-supporting .tags { gap: 5px 7px; }
+.skill-row-supporting .tags li { font-size: .625rem; padding: 2px 7px; background: var(--surface); border-radius: 5px; }
+
+.experience-section { gap: 60px; }
+.experience-intro > p:not(.eyebrow) { max-width: 430px; font-size: .8125rem; line-height: 1.85; margin-top: 16px; }
+.experience-intro::before { font-size: 2.5rem; margin-bottom: 18px; }
+.employer-card { padding: 20px; border-radius: 12px; }
+.employer-card + .employer-card { margin-top: 14px; }
+.employer-heading { margin-bottom: 21px; }
+.employer-heading h3 { font-size: 1.3rem; }
+.career-timeline > li { padding-bottom: 20px; }
+.career-title h4 { font-size: .9375rem; }
+.career-timeline p { font-size: .75rem; margin-top: 6px; }
+.career-timeline .tags { margin-top: 9px; }
+.education { padding: 17px; margin-top: 14px; border-radius: 11px; }
+.education .skill-icon { width: 36px; height: 36px; }
+.education h3 { font-size: .9375rem; }
+.certifications { padding: 18px; margin-top: 14px; border-radius: 11px; }
+.certifications > div { margin-top: 11px; }
+.principles-grid { gap: 27px; padding-block: 29px; }
+.principles-grid h2 { font-size: 1rem; margin-top: 10px; }
+.principles-grid p { font-size: .75rem; }
+.principles-grid > article > .mono { font-size: .625rem; }
+.recognition-section { padding-block: 46px; }
+.recognition-section .section-heading h2 { font-size: 1.85rem; }
+.recognition-grid { gap: 15px; }
+.recognition-grid .achievement-card { padding: 18px; background: var(--surface); border-radius: 11px; }
+.recognition-grid .achievement-card > div { padding: 0; }
+.recognition-icon { display: inline-flex; color: var(--aqua); margin-bottom: 11px; }
+.recognition-grid .achievement-card h3 { font-size: .875rem; line-height: 1.5; }
+.recognition-grid .achievement-card h3 svg { flex-shrink: 0; width: 15px; height: 15px; }
+.recognition-grid .achievement-card p { font-size: .75rem; line-height: 1.8; }
+.resume-summary { padding: 27px 30px; gap: 32px; margin-bottom: 64px; border-radius: 13px; }
+.resume-summary h2 { font-size: clamp(1.5rem, 2.3vw, 1.95rem); margin-block: 9px 12px; }
+.resume-summary-copy { max-width: 680px; }
+.resume-summary-copy > p:last-child { font-size: .75rem; }
+.contact-section { padding-block: 65px; }
+.contact-grid { gap: 65px; }
+.contact-form { padding: 24px; border-radius: 13px; }
+.contact-copy h1, .contact-copy h2 { font-size: clamp(2.4rem, 4vw, 3.4rem); }
+
+@media (max-width: 1100px) {
+  .skill-row { grid-template-columns: 195px minmax(0, 1fr); gap: 22px; }
+  .skill-row-primary { gap: 11px; }
+  .skill-row-primary > li { gap: 8px; }
+  .skill-row-primary strong { font-size: .6875rem; }
+  .skill-row-primary li > div > span { font-size: .5625rem; }
+  .experience-section { gap: 35px; }
+}
+@media (max-width: 800px) {
+  .section { padding-block: 52px; }
+  .selected-work { padding-block: 37px 52px; }
+  .skill-row { grid-template-columns: 190px minmax(0, 1fr); gap: 25px; padding-block: 20px; }
+  .skill-row-primary { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 16px; }
+  .skill-row-primary strong { font-size: .75rem; }
+  .skill-row-primary li > div > span { font-size: .625rem; }
+  .principles-grid { gap: 23px; }
+  .recognition-section { padding-block: 41px; }
+  .experience-intro > p:not(.eyebrow) { max-width: 640px; }
+  .resume-summary { padding: 25px; margin-bottom: 52px; }
+  .contact-grid { gap: 32px; }
+}
+@media (max-width: 600px) {
+  .section-heading h2, .experience-intro h2 { font-size: 1.9rem; }
+  .skill-row { grid-template-columns: minmax(0, 1fr); gap: 17px; }
+  .skill-row-heading { align-items: center; padding: 0; }
+  .skill-row h3 { font-size: 1rem; margin-top: 2px; }
+  .skill-row-heading .small-label { font-size: .625rem; }
+  .skill-row-primary { gap: 13px 20px; }
+  .skill-row-primary strong { font-size: .75rem; }
+  .skill-row-supporting { gap: 10px; margin-top: 14px; }
+  .employer-card { padding: 19px; }
+  .recognition-section .section-heading h2 { font-size: 1.7rem; }
+  .contact-section { padding-block: 50px; }
+  .contact-form { padding: 21px; }
+}
