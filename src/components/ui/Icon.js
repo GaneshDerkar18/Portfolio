@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-const paths = {
-=======
 import { ReactComponent as GitHub } from '@fortawesome/fontawesome-free/svgs/brands/github.svg';
 import { ReactComponent as LinkedIn } from '@fortawesome/fontawesome-free/svgs/brands/linkedin-in.svg';
 import { ReactComponent as Twitter } from '@fortawesome/fontawesome-free/svgs/brands/x-twitter.svg';
@@ -20,7 +17,6 @@ const paths = {
   down: 'M12 4v16m-6-6 6 6 6-6',
   left: 'M20 12H4m6-6-6 6 6 6',
   print: 'M7 8V3h10v5M7 17H3V8h18v9h-4M7 14h10v7H7zM17 11h.01',
->>>>>>> 08d3bc0 (updated ui)
   arrow: 'M7 17 17 7M7 7h10v10',
   right: 'M4 12h16m-6-6 6 6-6 6',
   menu: 'M4 6h16M4 12h16M4 18h16',
@@ -43,14 +39,7 @@ const paths = {
   download: 'M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5',
 };
 export default function Icon({ name, size = 20, className = '' }) {
-<<<<<<< HEAD
-  if (['github', 'linkedin', 'x-twitter', 'react', 'angular', 'docker'].includes(name)) {
-    return <i className={`fa-brands fa-${name} ${className}`} style={{ fontSize: size }} aria-hidden="true" />;
-  }
-  return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true"><path d={paths[name] || paths.code} /></svg>;
-=======
   const Brand = brands[name];
   if (Brand) return <Brand width={size} height={size} fill="currentColor" className={className} aria-hidden="true" focusable="false" />;
   return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true"><path d={paths[name] || paths.globe} /></svg>;
->>>>>>> 08d3bc0 (updated ui)
 }
