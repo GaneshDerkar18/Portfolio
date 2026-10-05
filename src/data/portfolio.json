@@ -5,17 +5,12 @@
     "initials": "GD",
     "role": "Full Stack Software Developer",
     "company": "Endava",
-<<<<<<< HEAD
-    "location": "India",
-=======
     "location": "Pune, India",
->>>>>>> 08d3bc0 (updated ui)
     "email": "ganesh.derkar.dev@gmail.com",
     "headline": [
       "Thoughtful code.",
       "Useful software."
     ],
-<<<<<<< HEAD
     "intro": "I’m Ganesh, a Full Stack Software Developer at Endava. I build intuitive interfaces, dependable APIs, and applications that connect the two.",
     "bio": [
       "I’m a Full Stack Software Developer at Endava with a background in Computer Engineering from MIT Academy of Engineering. I enjoy working across the stack, from the details of a responsive interface to the structure of a backend service.",
@@ -23,30 +18,16 @@
       "I’m interested in software that is easy to use and easy to maintain. Spec-driven development with Spec Kit helps me connect requirements, implementation plans, and the code that follows."
     ],
     "resumeUrl": "https://drive.google.com/file/d/1w-sSoS0w3oAzcuBZ5mHuCXCv7yWc0xdh/view?usp=sharing",
-=======
-    "intro": "Full Stack Software Developer at Endava, building web interfaces and APIs with React, Angular, and .NET.",
-    "thought": "Good software should make someone’s day a little easier.",
-    "bio": [
-      "I enjoy connecting the interface a person uses with the services behind it. Personal projects give me room to explore AI features, reusable React logic, and practical browser tools."
-    ],
->>>>>>> 08d3bc0 (updated ui)
     "socials": [
       {
         "label": "GitHub",
         "icon": "github",
-<<<<<<< HEAD
-        "url": "https://github.com/GaneshDerkar18"
-=======
         "url": "https://github.com/GaneshDerkar18",
         "showInResume": true
->>>>>>> 08d3bc0 (updated ui)
       },
       {
         "label": "LinkedIn",
         "icon": "linkedin",
-<<<<<<< HEAD
-        "url": "https://www.linkedin.com/in/ganesh-derkar"
-=======
         "url": "https://www.linkedin.com/in/ganesh-derkar",
         "showInResume": true
       },
@@ -55,17 +36,12 @@
         "icon": "leetcode",
         "url": "",
         "showInResume": true
->>>>>>> 08d3bc0 (updated ui)
       },
       {
         "label": "X / Twitter",
         "icon": "x-twitter",
-<<<<<<< HEAD
-        "url": "https://x.com/_GaneshDerkar"
-=======
         "url": "https://x.com/_GaneshDerkar",
         "showInResume": false
->>>>>>> 08d3bc0 (updated ui)
       }
     ],
     "focus": [
@@ -82,52 +58,6 @@
   "site": {
     "description": "Ganesh Derkar, Full Stack Software Developer at Endava. Explore projects in React, Angular, .NET Web API, microservices, Docker, and AI integrations.",
     "formspreeId": "mnndzgrv",
-<<<<<<< HEAD
-    "contactHeading": "Good software starts with a conversation.",
-    "contactDescription": "Have a project in mind, a technical question, or an idea to explore? I’d love to hear about it.",
-    "footerNote": "Built with React. Made with intention."
-  },
-  "featuredStack": [
-    {
-      "name": "React",
-      "icon": "react"
-    },
-    {
-      "name": "Angular",
-      "icon": "angular"
-    },
-    {
-      "name": ".NET Web API",
-      "icon": "code"
-    },
-    {
-      "name": "Docker",
-      "icon": "docker"
-    },
-    {
-      "name": "GitHub Actions",
-      "icon": "github"
-    },
-    {
-      "name": "AI integrations",
-      "icon": "sparkles"
-    }
-  ],
-  "skillGroups": [
-    {
-      "id": "frontend",
-      "title": "Interfaces that feel right",
-      "label": "Frontend",
-      "icon": "window",
-      "description": "Responsive, accessible experiences with reusable components and a clear visual hierarchy.",
-      "skills": [
-        "React",
-        "Angular",
-        "JavaScript",
-        "HTML5",
-        "CSS3",
-        "Bootstrap",
-=======
     "contactHeading": "Have an idea? Let’s make it real.",
     "contactDescription": "Want to discuss a role, a project, or a technical idea? Send me a message or email me directly.",
     "footerNote": "Built with React. Made with intention."
@@ -166,13 +96,11 @@
         "React Router",
         "HTML5",
         "CSS3",
->>>>>>> 08d3bc0 (updated ui)
         "Tailwind CSS"
       ]
     },
     {
       "id": "backend",
-<<<<<<< HEAD
       "title": "A dependable foundation",
       "label": "Backend & data",
       "icon": "server",
@@ -185,57 +113,12 @@
         "Node.js",
         "Express",
         "SQL",
-=======
-      "label": "Backend & data",
-      "title": "APIs & application services",
-      "icon": "server",
-      "description": "Application logic, service boundaries, authentication, and data.",
-      "skills": [
-        {
-          "name": ".NET Web API",
-          "mark": ".NET",
-          "featured": true,
-          "detail": "C# & REST services"
-        },
-        {
-          "name": "Microservices",
-          "icon": "layers",
-          "detail": "Service architecture"
-        },
-        {
-          "name": "Node.js",
-          "icon": "node",
-          "detail": "Express APIs"
-        },
-        {
-          "name": "SQL",
-          "icon": "database",
-          "detail": "Relational data"
-        },
-        "C#",
-        "REST APIs",
-        "Express",
->>>>>>> 08d3bc0 (updated ui)
         "MongoDB",
         "Firebase"
       ]
     },
     {
       "id": "delivery",
-<<<<<<< HEAD
-      "title": "From commit to delivery",
-      "label": "DevOps & workflow",
-      "icon": "layers",
-      "description": "Repeatable environments, automated workflows, and development grounded in clear specifications.",
-      "skills": [
-        "Docker",
-        "GitHub Actions CI/CD",
-        "Git",
-        "GitHub",
-        "Linux",
-        "Spec Kit",
-        "Spec-driven development"
-=======
       "label": "DevOps & workflow",
       "title": "Build, ship & maintain",
       "icon": "layers",
@@ -263,23 +146,10 @@
         "Linux",
         "Postman",
         "Parcel"
->>>>>>> 08d3bc0 (updated ui)
       ]
     },
     {
       "id": "ai",
-<<<<<<< HEAD
-      "title": "AI with a practical purpose",
-      "label": "AI & integrations",
-      "icon": "sparkles",
-      "description": "Connecting applications with AI services to explore useful, user-focused features.",
-      "skills": [
-        "OpenAI API",
-        "Gemini API",
-        "API integration",
-        "Prompt engineering",
-        "Python",
-=======
       "label": "AI & programming",
       "title": "Intelligence & problem solving",
       "icon": "sparkles",
@@ -307,25 +177,10 @@
           "detail": "Problem solving"
         },
         "Prompt engineering",
->>>>>>> 08d3bc0 (updated ui)
         "OCR"
       ]
     }
   ],
-<<<<<<< HEAD
-  "experience": [
-    {
-      "id": "endava",
-      "company": "Endava",
-      "role": "Full Stack Software Developer",
-      "period": "Present",
-      "current": true,
-      "description": "Working across frontend and backend development to turn requirements into practical software.",
-      "highlights": [
-        "Developing web experiences and backend services with a full-stack perspective.",
-        "Collaborating on implementation, code reviews, and maintainable solutions.",
-        "Continuing to grow across modern web development, API design, and delivery workflows."
-=======
   "companyWebsites": {
     "Endava": "https://www.endava.com/",
     "IBM SkillBuild": "https://skillsbuild.org/",
@@ -342,15 +197,10 @@
       "description": "Full-stack software development across web interfaces and backend services.",
       "highlights": [
         "Working across frontend and backend development to turn requirements into maintainable software."
->>>>>>> 08d3bc0 (updated ui)
       ],
       "skills": [
         "Full-stack development",
         "Web applications",
-<<<<<<< HEAD
-        "API development",
-        "Collaboration"
-=======
         "API development"
       ]
     },
@@ -389,68 +239,25 @@
         "HTML",
         "CSS",
         "JavaScript"
->>>>>>> 08d3bc0 (updated ui)
       ]
     }
   ],
   "education": {
-<<<<<<< HEAD
-    "institution": "MIT Academy of Engineering",
-    "subject": "Computer Engineering"
-  },
-  "principles": [
-    {
-      "number": "01",
-      "title": "Understand the problem",
-      "description": "Start with the people, the requirements, and what a useful outcome looks like."
-    },
-    {
-      "number": "02",
-      "title": "Build with clarity",
-      "description": "Keep interfaces intuitive, components reusable, and service boundaries clear."
-    },
-    {
-      "number": "03",
-      "title": "Keep improving",
-      "description": "Review, learn, and refine the small details that make software better over time."
-    }
-  ],
-=======
     "institution": "MIT Academy of Engineering, Pune",
     "subject": "B.Tech in Computer Engineering",
     "period": "2021 – 2025",
     "detail": "CGPA: 8.29"
   },
->>>>>>> 08d3bc0 (updated ui)
   "projects": [
     {
       "id": "netflix-gpt",
       "title": "NetflixGPT",
-<<<<<<< HEAD
-      "subtitle": "A movie discovery experience",
-=======
       "subtitle": "Find your next film",
->>>>>>> 08d3bc0 (updated ui)
       "category": "Full stack",
       "status": "Personal project",
       "featured": true,
       "accent": "red",
       "icon": "film",
-<<<<<<< HEAD
-      "image": "/assects/netflixgpt.png",
-      "description": "A movie-focused web application pairing a React interface with Firebase authentication and backend services.",
-      "overview": "A personal project exploring the experience of discovering movies through a familiar streaming-style interface. React powers the frontend while Firebase provides the backend foundation.",
-      "technologies": [
-        "React",
-        "Firebase",
-        "JavaScript",
-        "CSS"
-      ],
-      "highlights": [
-        "Streaming-inspired interface with a responsive layout.",
-        "Sign-in experience connected to Firebase.",
-        "Reusable React components for the browsing experience."
-=======
       "image": "/assects/netflixgpt-preview.jpg",
       "description": "Find films through AI recommendations, browse TMDB movie collections, and watch trailers in one React app.",
       "overview": "NetflixGPT brings movie discovery and trailer playback into one interface. I connected TMDB movie data with Gemini recommendations and Firebase authentication, using Redux to share application state across the browsing experience.",
@@ -466,7 +273,6 @@
         "Browse now-playing, popular, and top-rated movies from TMDB, alongside Gemini-powered recommendations.",
         "Open trailers from movie posters in a modal that also closes with the Escape key.",
         "Reuse trailer-fetching logic through custom hooks and share movie data through Redux."
->>>>>>> 08d3bc0 (updated ui)
       ],
       "githubUrl": "https://github.com/GaneshDerkar18/NetflixGpt",
       "demoUrl": "https://netflixgpt-c0be4.web.app"
@@ -474,32 +280,12 @@
     {
       "id": "food-delivery",
       "title": "Food Delivery",
-<<<<<<< HEAD
-      "subtitle": "Good food. A simpler experience.",
-=======
       "subtitle": "Food browsing, built with React",
->>>>>>> 08d3bc0 (updated ui)
       "category": "Frontend",
       "status": "Personal project",
       "featured": true,
       "accent": "orange",
       "icon": "utensils",
-<<<<<<< HEAD
-      "image": "/assects/fooddeli.png",
-      "description": "A responsive food delivery interface with API-driven content, client-side routing, and reusable React hooks.",
-      "overview": "An exploration of a practical food ordering interface, with an emphasis on reusable components, navigation, and working with external API data.",
-      "technologies": [
-        "React",
-        "React Router",
-        "REST APIs",
-        "JavaScript",
-        "CSS"
-      ],
-      "highlights": [
-        "Client-side navigation with React Router.",
-        "API integration for dynamic content.",
-        "Custom hooks that share stateful logic across components."
-=======
       "image": "/assects/fooddeli-preview.jpg",
       "imageCrop": { "top": 12, "bottom": 5 },
       "description": "A food browsing interface with API-driven listings, page navigation, and shared React hooks.",
@@ -516,7 +302,6 @@
         "Use React Router to move between views without a full-page reload.",
         "Populate the interface with external API data rather than hardcoded listings.",
         "Share stateful logic through custom hooks so components can focus on rendering."
->>>>>>> 08d3bc0 (updated ui)
       ],
       "githubUrl": "https://github.com/GaneshDerkar18/food-delivery-app",
       "demoUrl": ""
@@ -524,39 +309,24 @@
     {
       "id": "dev-tender",
       "title": "devTender",
-<<<<<<< HEAD
-      "subtitle": "Behind the connection",
-=======
       "subtitle": "Exploring the service layer",
->>>>>>> 08d3bc0 (updated ui)
       "category": "Backend",
       "status": "Personal project",
       "featured": true,
       "accent": "blue",
       "icon": "server",
       "image": "",
-<<<<<<< HEAD
-      "description": "A backend project built with Node.js, Express, and MongoDB, focused on the service layer of a web application.",
-      "overview": "A backend-focused project for exploring application services with the Node.js ecosystem and a document database.",
-=======
       "description": "A Node.js service layer using Express for request handling and MongoDB for document storage.",
       "overview": "devTender is my backend-focused exploration of application services. The project brings together an Express server and MongoDB persistence, keeping server-side logic separate from the interface.",
->>>>>>> 08d3bc0 (updated ui)
       "technologies": [
         "Node.js",
         "Express",
         "MongoDB"
       ],
       "highlights": [
-<<<<<<< HEAD
-        "Backend development with Node.js and Express.",
-        "MongoDB for document-based persistence.",
-        "Separation of server-side logic from the frontend."
-=======
         "Handle application requests with a Node.js and Express service layer.",
         "Store application data as documents in MongoDB.",
         "Keep server-side logic separate from frontend rendering."
->>>>>>> 08d3bc0 (updated ui)
       ],
       "githubUrl": "https://github.com/GaneshDerkar18/devTender",
       "demoUrl": ""
@@ -571,11 +341,7 @@
       "accent": "green",
       "icon": "check",
       "image": "/assects/todolist.png",
-<<<<<<< HEAD
-      "description": "A focused React task manager with task creation, editing, completion, deletion, and search.",
-=======
       "description": "Create, edit, complete, and search everyday tasks in a focused React interface.",
->>>>>>> 08d3bc0 (updated ui)
       "overview": "A small productivity application built to make everyday tasks easy to manage while practicing React state management and functional components.",
       "technologies": [
         "React",
@@ -601,11 +367,7 @@
       "accent": "purple",
       "icon": "scan",
       "image": "",
-<<<<<<< HEAD
-      "description": "An OCR project that extracts text from images and turns visual information into readable content.",
-=======
       "description": "Extract readable text from images using optical character recognition.",
->>>>>>> 08d3bc0 (updated ui)
       "overview": "A project exploring optical character recognition to extract text from image-based sources. The linked repository contains the project implementation.",
       "technologies": [
         "OCR",
@@ -619,8 +381,6 @@
       "demoUrl": ""
     },
     {
-<<<<<<< HEAD
-=======
       "id": "auto-pause-video",
       "title": "Auto Pause Video",
       "subtitle": "A small extension for focused browsing",
@@ -646,7 +406,6 @@
       "demoUrl": ""
     },
     {
->>>>>>> 08d3bc0 (updated ui)
       "id": "commerce-microservices",
       "title": "Commerce Services",
       "subtitle": "An API-first commerce concept",
@@ -656,11 +415,7 @@
       "accent": "blue",
       "icon": "layers",
       "image": "",
-<<<<<<< HEAD
-      "description": "A project concept for independent catalog and order services with .NET Web API, Docker, and an automated delivery pipeline.",
-=======
       "description": "Planned catalog and order APIs using .NET, Docker, and GitHub Actions.",
->>>>>>> 08d3bc0 (updated ui)
       "overview": "A proposed portfolio project for demonstrating microservice boundaries and repeatable delivery. This is a concept, not a completed implementation.",
       "technologies": [
         ".NET Web API",
@@ -688,11 +443,7 @@
       "accent": "purple",
       "icon": "sparkles",
       "image": "",
-<<<<<<< HEAD
-      "description": "A project concept for an Angular workspace backed by a .NET API integrating OpenAI and Gemini.",
-=======
       "description": "A planned Angular workspace connecting OpenAI and Gemini through a .NET API.",
->>>>>>> 08d3bc0 (updated ui)
       "overview": "A proposed application for exploring AI-assisted workflows through a common interface. Provider credentials would live on the server. This is a concept, not a completed implementation.",
       "technologies": [
         "Angular",
@@ -719,11 +470,7 @@
       "accent": "green",
       "icon": "code",
       "image": "",
-<<<<<<< HEAD
-      "description": "A starter project concept connecting Spec Kit specifications, implementation tasks, and GitHub Actions checks.",
-=======
       "description": "A planned starter connecting Spec Kit specifications with implementation tasks and automated checks.",
->>>>>>> 08d3bc0 (updated ui)
       "overview": "A proposed development starter that keeps the problem statement and implementation plan close to the code. This is a concept, not a completed implementation.",
       "technologies": [
         "Spec Kit",
@@ -745,40 +492,25 @@
     {
       "id": "hackathon",
       "title": "Inspiron 2.0 Hackathon",
-<<<<<<< HEAD
-      "description": "Participated in the national-level hackathon at COEP Technological University in March 2023.",
-=======
       "description": "National-level hackathon participant at COEP Technological University · March 2023.",
->>>>>>> 08d3bc0 (updated ui)
       "image": "/assects/hackathon.png",
       "url": "/assects/hackathon.png"
     },
     {
       "id": "iymc",
       "title": "IYMC 2022 · Bronze Honour",
-<<<<<<< HEAD
-      "description": "Placed among the top 15% of participants in the International Youth Math Challenge final round.",
-=======
       "description": "Top 15% in the International Youth Math Challenge final round.",
->>>>>>> 08d3bc0 (updated ui)
       "image": "/assects/iymc.png",
       "url": "/assects/iymc.png"
     },
     {
       "id": "equilibrium",
       "title": "Equilibrium 2022 · 2nd runner-up",
-<<<<<<< HEAD
-      "description": "Recognized at the national-level eXEMPLAR event at MIT Academy of Engineering.",
-=======
       "description": "National-level eXEMPLAR event at MIT Academy of Engineering.",
->>>>>>> 08d3bc0 (updated ui)
       "image": "/assects/WhatsApp Image 2025-04-23 at 12.49.11.jpeg",
       "url": "/assects/WhatsApp Image 2025-04-23 at 12.49.11.jpeg"
     }
   ],
-<<<<<<< HEAD
-  "certificatesUrl": "https://drive.google.com/drive/folders/1jLq8rOdQ67uZjP056xQ8N4uTsu_0ou1O?usp=sharing"
-=======
   "certificatesUrl": "https://drive.google.com/drive/folders/1jLq8rOdQ67uZjP056xQ8N4uTsu_0ou1O?usp=sharing",
   "resume": {
     "fileName": "Ganesh-Derkar-Resume",
@@ -803,5 +535,4 @@
       "date": "Sep 2024"
     }
   ]
->>>>>>> 08d3bc0 (updated ui)
 }

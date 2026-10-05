@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import { useEffect } from 'react';
-import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
-import './App.css';
-import portfolio from './data/portfolio.json';
-import Header from './components/Header/Header';
-import Body from './components/Body/Body';
-import About from './components/About/About';
-import MoreAbout from './components/About/moreabout';
-import Work from './components/MyWork/MyWork';
-import ProjectDetail, { NotFound } from './components/MyWork/ProjectDetail';
-import Contact from './components/Contact/Contact';
-import { Experience, FeaturedProjects, Skills } from './components/Sections';
-import { Footer } from './components/ui/Shared';
-
-=======
 import { lazy, Suspense, useEffect } from 'react';
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import './App.css';
@@ -33,16 +17,11 @@ const Work = lazy(() => import('./components/MyWork/MyWork'));
 const ProjectDetail = lazy(() => import('./components/MyWork/ProjectDetail'));
 const Resume = lazy(() => import('./components/Resume/Resume'));
 
->>>>>>> 08d3bc0 (updated ui)
 function PageEffects() {
   const { pathname, hash } = useLocation();
   useEffect(() => {
     const project = portfolio.projects.find(item => pathname === `/projects/${item.id}`);
-<<<<<<< HEAD
-    const labels = { '/': portfolio.profile.role, '/about': 'About', '/projects': 'Projects', '/contact': 'Contact', '/moreabout': 'Certificates & achievements' };
-=======
     const labels = { '/': portfolio.profile.role, '/about': 'About', '/projects': 'Projects', '/contact': 'Contact', '/moreabout': 'Certificates & achievements', '/resume': 'Resume' };
->>>>>>> 08d3bc0 (updated ui)
     const title = `${project?.title || labels[pathname] || 'Page not found'} | ${portfolio.profile.name}`;
     const description = project?.description || portfolio.site.description;
     document.title = title;
@@ -52,10 +31,6 @@ function PageEffects() {
       ['meta[name="twitter:description"]', description],
     ]) document.querySelector(selector)?.setAttribute('content', value);
     const frame = requestAnimationFrame(() => {
-<<<<<<< HEAD
-      if (hash) { document.getElementById(hash.slice(1))?.scrollIntoView({ behavior: 'instant' }); }
-      else { window.scrollTo({ top: 0, behavior: 'instant' }); document.getElementById('main-content')?.focus({ preventScroll: true }); }
-=======
       if (hash) {
         const target = document.getElementById(hash.slice(1));
         const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
@@ -64,20 +39,12 @@ function PageEffects() {
         window.scrollTo({ top: 0, behavior: 'instant' });
         document.getElementById('main-content')?.focus({ preventScroll: true });
       }
->>>>>>> 08d3bc0 (updated ui)
     });
     return () => cancelAnimationFrame(frame);
   }, [pathname, hash]);
   return null;
 }
 function Home() {
-<<<<<<< HEAD
-  return <><Body /><FeaturedProjects /><Skills /><Experience /><Contact /></>;
-}
-export default function App() {
-  const basename = process.env.PUBLIC_URL ? new URL(process.env.PUBLIC_URL, window.location.origin).pathname.replace(/\/$/, '') : undefined;
-  return <BrowserRouter basename={basename}><div id="top" className="app"><a href="#main-content" className="skip-link">Skip to content</a><PageEffects /><Header /><main id="main-content" tabIndex="-1"><Routes><Route path="/" element={<Home />} /><Route path="/about" element={<About />} /><Route path="/projects" element={<Work />} /><Route path="/projects/:projectId" element={<ProjectDetail />} /><Route path="/contact" element={<Contact standalone />} /><Route path="/moreabout" element={<MoreAbout />} /><Route path="*" element={<NotFound />} /></Routes></main><Footer /></div></BrowserRouter>;
-=======
   return <><Body /><FeaturedProjects /><Skills /><Experience /><Achievements compact /><Contact /></>;
 }
 export default function App() {
@@ -101,5 +68,4 @@ export default function App() {
       </div>
     </BrowserRouter>
   );
->>>>>>> 08d3bc0 (updated ui)
 }
