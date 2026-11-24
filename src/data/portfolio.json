@@ -11,13 +11,11 @@
       "Thoughtful code.",
       "Useful software."
     ],
-    "intro": "I’m Ganesh, a Full Stack Software Developer at Endava. I build intuitive interfaces, dependable APIs, and applications that connect the two.",
+    "intro": "Software developer at Endava. I build web interfaces and APIs with React, Angular, and .NET.",
+    "thought": "Good software should make someone’s day a little easier.",
     "bio": [
-      "I’m a Full Stack Software Developer at Endava with a background in Computer Engineering from MIT Academy of Engineering. I enjoy working across the stack, from the details of a responsive interface to the structure of a backend service.",
-      "My toolkit includes React, Angular, .NET Web API, and microservices. I work with Docker and GitHub Actions for delivery, and use OpenAI and Gemini API integrations in my projects to explore practical AI features.",
-      "I’m interested in software that is easy to use and easy to maintain. Spec-driven development with Spec Kit helps me connect requirements, implementation plans, and the code that follows."
+      "I enjoy connecting the interface a person uses with the services behind it. Personal projects give me room to explore AI features, reusable React logic, and practical browser tools."
     ],
-    "resumeUrl": "https://drive.google.com/file/d/1w-sSoS0w3oAzcuBZ5mHuCXCv7yWc0xdh/view?usp=sharing",
     "socials": [
       {
         "label": "GitHub",
@@ -56,10 +54,10 @@
     ]
   },
   "site": {
-    "description": "Ganesh Derkar, Full Stack Software Developer at Endava. Explore projects in React, Angular, .NET Web API, microservices, Docker, and AI integrations.",
+    "description": "Ganesh Derkar is a software developer at Endava in Pune, India. Explore selected web projects, experience, and skills.",
     "formspreeId": "mnndzgrv",
-    "contactHeading": "Have an idea? Let’s make it real.",
-    "contactDescription": "Want to discuss a role, a project, or a technical idea? Send me a message or email me directly.",
+    "contactHeading": "Get in touch.",
+    "contactDescription": "For a role, project, or question, send me an email.",
     "footerNote": "Built with React. Made with intention."
   },
   "skillGroups": [
@@ -101,18 +99,35 @@
     },
     {
       "id": "backend",
-      "title": "A dependable foundation",
       "label": "Backend & data",
+      "title": "APIs & application services",
       "icon": "server",
-      "description": "APIs and services that connect the interface to the data and logic behind it.",
+      "description": "Application logic, service boundaries, authentication, and data.",
       "skills": [
+        {
+          "name": ".NET Web API",
+          "mark": ".NET",
+          "featured": true,
+          "detail": "C# & REST services"
+        },
+        {
+          "name": "Microservices",
+          "icon": "layers",
+          "detail": "Service architecture"
+        },
+        {
+          "name": "Node.js",
+          "icon": "node",
+          "detail": "Express APIs"
+        },
+        {
+          "name": "SQL",
+          "icon": "database",
+          "detail": "Relational data"
+        },
         "C#",
-        ".NET Web API",
-        "Microservices",
         "REST APIs",
-        "Node.js",
         "Express",
-        "SQL",
         "MongoDB",
         "Firebase"
       ]

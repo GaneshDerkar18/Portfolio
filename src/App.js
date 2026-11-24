@@ -7,9 +7,9 @@ import Header from './components/Header/Header';
 import Body from './components/Body/Body';
 import Contact from './components/Contact/Contact';
 import { Achievements, Experience, FeaturedProjects, Skills } from './components/Sections';
-import CursorTrail from './components/ui/CursorTrail';
 import { Footer } from './components/ui/Shared';
 import NotFound from './components/ui/NotFound';
+import './portfolio.css';
 
 const About = lazy(() => import('./components/About/About'));
 const MoreAbout = lazy(() => import('./components/About/moreabout'));
@@ -45,7 +45,7 @@ function PageEffects() {
   return null;
 }
 function Home() {
-  return <><Body /><FeaturedProjects /><Skills /><Experience /><Achievements compact /><Contact /></>;
+  return <><Body /><FeaturedProjects /><Experience /><Skills /><Achievements compact /><Contact /></>;
 }
 export default function App() {
   const basename = process.env.PUBLIC_URL ? new URL(process.env.PUBLIC_URL, window.location.origin).pathname.replace(/\/$/, '') : undefined;
@@ -53,7 +53,7 @@ export default function App() {
     <BrowserRouter basename={basename}>
       <div id="top" className="app">
         <a href="#main-content" className="skip-link">Skip to content</a>
-        <PageEffects /><Header /><CursorTrail />
+        <PageEffects /><Header />
         <main id="main-content" tabIndex="-1">
           <Suspense fallback={<div className="container page-loading" role="status">Loading page…</div>}>
             <Routes>

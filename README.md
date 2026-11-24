@@ -1,6 +1,6 @@
 # Ganesh Derkar — React portfolio
 
-A responsive full-stack developer portfolio with dark and light themes, project search and filters, individual project pages, experience, skills, certificates, and a Formspree contact form.
+A clean, responsive portfolio with project details, experience, skills, certificates, and contact links. Portfolio text and links are managed from one JSON file.
 
 ## Update everything in one file
 
@@ -8,17 +8,17 @@ Edit **`src/data/portfolio.json`**. This is the content source for all pages.
 
 | Section | What to update |
 | --- | --- |
-| `profile` | Name, role, employer, introduction, personal thought, biography, location, social links, and ID-card focus areas |
+| `profile` | Name, role, employer, introduction, biography, location, social links, and areas of focus |
 | `resume` | Professional summary, selected projects, optional phone, PDF filename, and resume options |
-| `projects` | Project cards, detail pages, featured work, technology tags, and links |
-| `skillGroups` | Skills section, homepage technology strip, and resume skills |
+| `projects` | Project list, detail pages, featured work, technology tags, and links |
+| `skillGroups` | Skills list and resume skills |
 | `experience` / `education` | Work history and education |
 | `companyWebsites` | Official company URLs used across the site and PDF resume |
 | `achievements` / `certifications` | Awards and professional certifications |
 | `site` | Site description, contact copy, Formspree form ID, footer text |
 | `certificatesUrl` | Link to the full certificate collection |
 
-`profile.role` is your professional headline. Each `experience` entry keeps its exact job title, employer, and dates; the entry with `current: true` also powers the current job on your ID card. The experience section groups consecutive roles at one employer into a promotion timeline. `profile.thought` supplies the short personal thought below your introduction. A short biography, experience, education, certifications, and awards are visible on the homepage. Keep `profile.bio` personal and concise; dates and technology lists already have their own sections.
+To make a routine update, open `src/data/portfolio.json` and edit the matching value. The homepage shows the profile introduction, featured projects, a short skills list, experience, and contact information. Keep project descriptions short and use the detail fields for extra context.
 
 Add a company name and its official website to `companyWebsites` (for example, `"Endava": "https://www.endava.com/"`). Shared company text links matching names in the profile, biography, experience, certifications, and resume. The downloadable PDF contains clickable company links while preserving selectable text. Missing or unsafe URLs leave the company name as plain text.
 
@@ -40,7 +40,7 @@ Each `skillGroups[].skills` item can be a plain string (supporting skill) or an 
 { "name": ".NET Web API", "mark": ".NET", "detail": "C# & REST services", "featured": true }
 ```
 
-`detail` gives the skill a primary position in its category row, with a short description beneath its name. Supporting skills follow as smaller labels. Use `icon` for an existing SVG icon, or `mark` for a short text symbol. `featured: true` also puts it in the continuously scrolling technology strip. The resume takes the names from these same entries; there is no second list to maintain. No proficiency percentages are invented.
+`detail` adds a short description where the skill is used. Use `icon` for an existing SVG icon, or `mark` for a short text symbol. Skills marked `featured: true` appear in the compact homepage list. The resume takes skill names from these same entries; there is no second list to maintain. No proficiency percentages are invented.
 
 ### Add a project
 

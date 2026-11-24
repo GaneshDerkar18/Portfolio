@@ -9,12 +9,18 @@ const ContactForm = lazy(() => import('./ContactForm'));
 
 export default function Contact({ standalone = false }) {
   const Heading = standalone ? 'h1' : 'h2';
+  if (!standalone) {
+    return <section id="contact" className="contact-section"><div className="container contact-simple">
+      <div><p className="eyebrow">Contact</p><h2>{portfolio.site.contactHeading}</h2><p>{portfolio.site.contactDescription}</p></div>
+      <a className="email-link" href={`mailto:${portfolio.profile.email}`}>{portfolio.profile.email}<Icon name="arrow" size={22} /></a>
+    </div></section>;
+  }
   return (
     <section id="contact" className={`contact-section ${standalone ? 'standalone-contact' : ''}`}>
       <Reveal className="container contact-grid">
         <div className="contact-copy">
           <span className="contact-star" aria-hidden="true">✳</span>
-          <p className="eyebrow">{standalone ? 'Get in touch' : '04 / Let’s connect'}</p>
+          <p className="eyebrow">Get in touch</p>
           <Heading><AnimatedText text={portfolio.site.contactHeading} /></Heading><p>{portfolio.site.contactDescription}</p>
           <a className="email-link" href={`mailto:${portfolio.profile.email}`}>{portfolio.profile.email}<Icon name="arrow" size={22} /></a>
           <SocialLinks showLabels /><p className="contact-location"><Icon name="pin" size={16} /> Based in {portfolio.profile.location}. Connected everywhere.</p>

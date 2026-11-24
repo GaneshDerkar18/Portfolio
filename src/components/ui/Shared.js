@@ -58,11 +58,10 @@ export function ProjectVisual({ project, large = false, priority = false }) {
 }
 export function ProjectCard({ project, index = 0 }) {
   return (
-    <article className="project-card">
-      <Link to={`/projects/${project.id}`} className="project-image-link" aria-label={`Explore ${project.title}`}><ProjectVisual project={project} /></Link>
+    <article className={`project-card ${isProjectConcept(project) ? 'is-concept' : ''}`}>
       <div className="project-card-body">
-        <div className="project-meta"><span>{project.category}</span><span className="mono">{String(index + 1).padStart(2, '0')}</span></div>
-        <h3><Link to={`/projects/${project.id}`}>{project.title}<Icon name="arrow" /></Link></h3>
+        <div className="project-meta"><span>{project.category} · {project.status}</span>{index > -1 && <span className="mono">{String(index + 1).padStart(2, '0')}</span>}</div>
+        <h3><Link to={`/projects/${project.id}`}>{project.title}</Link></h3>
         <p>{project.description}</p>
         <Tags items={project.technologies.slice(0, 3)} />
         <div className="project-links">

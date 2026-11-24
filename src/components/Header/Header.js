@@ -7,10 +7,9 @@ import Button from '../ui/Button';
 import './Header.css';
 
 const navigation = [
-  { label: 'About', to: '/#about' },
   { label: 'Projects', to: '/#work' },
-  { label: 'Skills', to: '/#skills' },
   { label: 'Experience', to: '/#experience' },
+  { label: 'Contact', to: '/#contact' },
 ];
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -44,7 +43,6 @@ export default function Header() {
       <Link className="brand" to="/" aria-label={`${portfolio.profile.name}, home`}><span className="brand-mark">{portfolio.profile.initials}<span>.</span></span><span className="brand-name">{portfolio.profile.name}</span></Link>
       <nav id="main-navigation" aria-label="Main navigation" className={`navigation ${open ? 'is-open' : ''}`}>
         {navigation.map(item => <Link key={item.to} to={item.to} onClick={() => setOpen(false)} aria-current={location.pathname + location.hash === item.to ? 'location' : undefined}>{item.label}</Link>)}
-        <Link to="/resume" onClick={() => setOpen(false)} aria-current={location.pathname === '/resume' ? 'page' : undefined}>Resume</Link>
         <Link to="/#contact" className="mobile-contact" onClick={() => setOpen(false)}>Let’s talk</Link>
       </nav>
       <div className="header-actions"><ThemeToggle /><Button to="/#contact" size="small" className="header-contact" icon="arrow">Let’s talk</Button><Button variant="icon" ref={toggle} className="icon-button menu-toggle" onClick={() => setOpen(!open)} aria-controls="main-navigation" aria-expanded={open} aria-label={open ? 'Close navigation' : 'Open navigation'}><Icon name={open ? 'close' : 'menu'} /></Button></div>
